@@ -25,6 +25,7 @@ class TrackFactory extends Factory
         return [
             'user_id' => User::factory(),
             'week_id' => Week::factory(),
+            'category_id' => \App\Models\Category::inRandomOrder()->first()->id,
             'artist' => fake()->name(),
             'title' => fake()->sentence(2),
             'url' => fake()->randomElement(['https://youtube.com/watch?v=ID', 'https://soundcloud/USER/TRACK']),
