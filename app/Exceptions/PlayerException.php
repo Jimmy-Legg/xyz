@@ -39,3 +39,4 @@ class PlayerException extends RuntimeException
             ->withInput($request->only(['title', 'artist', 'url']));
     }
 }
+

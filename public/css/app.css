@@ -68,9 +68,40 @@ a {
     text-decoration: none;
 }
 
+a.link {
+    color: white; 
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+a.link:hover {
+    text-decoration-style: solid;
+}
+
 hr {
     border-style: solid;
     border-color: var(--secondary);
+}
+
+select {
+    background-color: var(--input-background);
+    border: 2px solid var(--input-border);
+    color: var(--text-primary);
+    padding: 0.65rem 0.7rem;
+    width: 22rem;
+}
+
+select:focus {
+    border-color: var(--input-border-focused);
+    outline: none;
+}
+
+option {
+    color: var(--text-primary);
+}
+
+option:disabled {
+    color: var(--text-secondary);
 }
 
 /**
@@ -644,57 +675,27 @@ ol.chart li .details .metadata-item svg {
     height: 0.95rem;
 }
 
-@media (max-width: 1024px) {
-    .container {
-        width: 50%;
-    }
-
-    .grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .two-cols {
-        gap: 2rem;
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .two-cols:first-child {
-        grid-column: 1;
-    }
-
-    input[type=file] {
-        width: 100%;
-    }
-
-    form input.w-large, 
-    form input.w-medium {
-        width: 100%;
-    } 
+.pagination {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-@media (max-width: 640px) {
-    .container {
-        width: 95%;
-    }
+.pagination a {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    color: var(--text-secondary);
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 12px;
+}
 
-    nav.container-wide {
-        width: 100%;
-    }
+.pagination a svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
 
-    nav {
-        display: block;
-    }
-
-    nav ul {
-        display: block;
-    }
-
-    nav ul li {       
-        padding: 15px 15px;
-    }
-
-    .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+.pagination a:hover {
+    color: var(--text-primary);
+    border-color: var(--text-primary);
 }
